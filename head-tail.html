@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>08-ex-i</title>
+</head>
+<body>
+  <button onclick="playGame('Head');
+  
+  ">Head</button>
+
+  <button onclick="playGame('Tail');
+  ">Tail</button>
+  
+</body>
+<script>
+  let score=JSON.parse(localStorage.getItem('score'))||{
+    wins:0,
+    losses:0
+  };
+  function playGame(guess)
+  {
+    const randomNumber=Math.random();
+    const result=randomNumber <0.5 ? 'Head':'Tail';
+
+    console.log(guess === result? 'You Win!':'You Lose!');
+
+
+    if(guess === result)
+    {
+      score.wins++;
+    }
+    else{
+      score.losses++;
+    }
+    console.log(score);
+    localStorage.setItem('score',JSON.stringify(score));
+  }
+</script>
+</html>
