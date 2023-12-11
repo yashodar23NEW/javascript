@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11-l</title>
+</head>
+<body>
+  <script>
+    function minMax(num)
+    {
+      const result={
+        min:num[0],
+        max:num[0]
+      };
+
+      for(let i=0;i<num.length;i++)
+      {
+        const value=num[i];
+        if(value<result.min)
+        {
+          result.min=value;
+        }
+
+        if(value>result.max)
+        {
+          result.max=value;
+        }
+      }
+      return result;
+    }
+    console.log(minMax([1,-3,5]));
+    console.log(minMax([-1,-3,5,100]));
+
+  </script>
+  
+</body>
+</html>
