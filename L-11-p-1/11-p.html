@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11-p</title>
+</head>
+<body>
+  <script>
+    let words=['hello','world','serch','good'];
+
+    let index=-1;
+    for(let i=0; i<words.length;i++)
+    {
+      if(words[i]==='serch')
+      {
+        index= i;
+        break;
+      }
+
+    }
+    console.log(index);
+
+    words=['not','found'];
+    index=-1;
+    for(let i=0;i<words.length;i++)
+    {
+      if(words[i]==='serch')
+      {
+        index=i;
+        break;
+      }
+    }
+    console.log(index);
+   
+  </script>
+  
+</body>
+</html>
